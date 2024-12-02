@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/barista_minigame.rpy", line 8: invalid syntax
+    def reset_cup_attributes(){
+                               ^
+
+Ren'Py Version: Ren'Py 8.3.3.24111502
+Tue Dec  3 01:23:28 2024

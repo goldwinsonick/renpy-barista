@@ -1,0 +1,60 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 3, in script
+    call screen barista_minigame
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 582, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/barista_minigame.rpy", line 74, in serve_cup
+    total_money += order_price
+UnboundLocalError: local variable 'total_money' referenced before assignment
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 3, in script
+    call screen barista_minigame
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 671, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\exports\statementexports.py", line 345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\core.py", line 3286, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\screen.py", line 793, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\layout.py", line 1297, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\behavior.py", line 1182, in event
+    return handle_click(self.clicked)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\behavior.py", line 1103, in handle_click
+    rv = run(action)
+  File "C:\Users\goldw\Documents\gswt\Project\PKWN-2024\renpy-8.3.3-sdk\renpy\display\behavior.py", line 401, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 582, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/barista_minigame.rpy", line 74, in serve_cup
+    total_money += order_price
+UnboundLocalError: local variable 'total_money' referenced before assignment
+
+Windows-10-10.0.22631 AMD64
+Ren'Py 8.3.3.24111502
+renpy_barista 1.0
+Tue Dec  3 02:04:45 2024
