@@ -7,9 +7,9 @@ While running game code:
     store._return = renpy.call_screen(name, *args, **kwargs)
   File "renpy/common/00action_other.rpy", line 582, in __call__
     rv = self.callable(*self.args, **self.kwargs)
-  File "game/barista_minigame.rpy", line 74, in serve_cup
-    total_money += order_price
-UnboundLocalError: local variable 'total_money' referenced before assignment
+  File "game/barista_minigame.rpy", line 110, in serve_cup
+    tip = (renpy.rand.randint(order_tip_range[0], order_tip_range[1]) // 500) * 500
+AttributeError: module 'renpy.exports' has no attribute 'rand'
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -50,11 +50,11 @@ Full traceback:
     return action(*args, **kwargs)
   File "renpy/common/00action_other.rpy", line 582, in __call__
     rv = self.callable(*self.args, **self.kwargs)
-  File "game/barista_minigame.rpy", line 74, in serve_cup
-    total_money += order_price
-UnboundLocalError: local variable 'total_money' referenced before assignment
+  File "game/barista_minigame.rpy", line 110, in serve_cup
+    tip = (renpy.rand.randint(order_tip_range[0], order_tip_range[1]) // 500) * 500
+AttributeError: module 'renpy.exports' has no attribute 'rand'
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.3.3.24111502
 renpy_barista 1.0
-Tue Dec  3 02:04:45 2024
+Tue Dec  3 13:49:15 2024
